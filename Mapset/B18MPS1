@@ -1,0 +1,279 @@
+B18MPS1  DFHMSD TYPE=&SYSPARM,MODE=INOUT,CTRL=(FREEKB,FRSET),          X
+               LANG=COBOL,TIOAPFX=YES,                                 X
+               DSATTS=(COLOR,HILIGHT),                                 X
+               MAPATTS=(COLOR,HILIGHT),                                X
+               STORAGE=AUTO
+LOGIN    DFHMDI SIZE=(24,80)
+         DFHMDF POS=(01,30),LENGTH=20,ATTRB=(PROT,BRT),                X
+               INITIAL='A A HOSPITALS'
+         DFHMDF POS=(01,63),LENGTH=6,ATTRB=PROT,INITIAL='DATE :'
+DATE     DFHMDF POS=(01,70),LENGTH=10,ATTRB=PROT,INITIAL='DD/MM/YYYY'
+         DFHMDF POS=(04,25),LENGTH=30,ATTRB=(PROT,BRT),                X
+               INITIAL='LOGIN SCREEN'
+         DFHMDF POS=(09,25),LENGTH=10,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='USERID   :'
+USERID   DFHMDF POS=(09,36),LENGTH=6,ATTRB=(UNPROT,FSET),              X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(09,43),LENGTH=1,ATTRB=ASKIP
+         DFHMDF POS=(11,25),LENGTH=10,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='PASSWORD :'
+PASSWD   DFHMDF POS=(11,36),LENGTH=6,ATTRB=(UNPROT,DRK,FSET),          X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(11,43),LENGTH=1,ATTRB=ASKIP
+MSG      DFHMDF POS=(20,04),LENGTH=70,ATTRB=PROT,COLOR=YELLOW,         X
+               INITIAL='                          '
+         DFHMDF POS=(24,04),LENGTH=70,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='PF2 - CONFIRM PF3 - EXIT  PF12 - CLEAR'
+MENU     DFHMDI SIZE=(24,80)
+         DFHMDF POS=(01,30),LENGTH=20,ATTRB=(PROT,BRT),                X
+               INITIAL='A A HOSPITALS'
+         DFHMDF POS=(01,63),LENGTH=6,ATTRB=PROT,INITIAL='DATE :'
+MDATE    DFHMDF POS=(01,70),LENGTH=10,ATTRB=PROT,INITIAL='DD/MM/YYYY'
+         DFHMDF POS=(04,25),LENGTH=30,ATTRB=(PROT,BRT),                X
+               INITIAL='MAIN MENU'
+         DFHMDF POS=(07,25),LENGTH=30,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='1. PATIENT REPOSITORY'
+         DFHMDF POS=(09,25),LENGTH=30,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='2. DOCTOR REPOSITORY'
+         DFHMDF POS=(11,25),LENGTH=30,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='3. BLOOD DONOR REPOSITORY'
+         DFHMDF POS=(13,25),LENGTH=30,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='4. PATIENT REPORT'
+         DFHMDF POS=(15,25),LENGTH=30,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='5. DOCTOR REPORT'
+         DFHMDF POS=(17,25),LENGTH=30,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='6. BLOOD DONOR REPORT'
+         DFHMDF POS=(19,50),LENGTH=7,ATTRB=PROT,COLOR=BLUE,            X
+               INITIAL='OPTION:'
+MOPT     DFHMDF POS=(19,58),LENGTH=1,ATTRB=UNPROT,HILIGHT=UNDERLINE
+         DFHMDF POS=(19,60),LENGTH=1,ATTRB=ASKIP
+MMSG     DFHMDF POS=(20,04),LENGTH=70,ATTRB=PROT,COLOR=YELLOW,         X
+               INITIAL='                          '
+         DFHMDF POS=(24,04),LENGTH=70,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='PF2 - CONFIRM PF3 - EXIT  PF12 - CLEAR'
+PATREPO  DFHMDI SIZE=(24,80)
+         DFHMDF POS=(01,30),LENGTH=20,ATTRB=(PROT,BRT),                X
+               INITIAL='A A HOSPITALS'
+         DFHMDF POS=(01,63),LENGTH=6,ATTRB=PROT,INITIAL='DATE :'
+PDATE    DFHMDF POS=(01,70),LENGTH=10,ATTRB=PROT,INITIAL='DD/MM/YYYY'
+         DFHMDF POS=(04,25),LENGTH=30,ATTRB=(PROT,BRT),                X
+               INITIAL='PATIENT REPOSITORY'
+         DFHMDF POS=(09,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='PATIENT ID              :'
+PATID    DFHMDF POS=(09,27),LENGTH=15,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(09,43),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(10,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='NAME OF PATIENT         :'
+PNAME    DFHMDF POS=(10,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(10,58),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(11,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='ADDRESS OF THE PATIENT  :'
+PADD     DFHMDF POS=(11,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(11,58),LENGTH=01,ATTRB=ASKIP
+PADD1    DFHMDF POS=(12,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(12,58),LENGTH=01,ATTRB=ASKIP
+PADD2    DFHMDF POS=(13,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(13,58),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(14,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='ZIP CODE                :'
+PZIP     DFHMDF POS=(14,27),LENGTH=6,ATTRB=(UNPROT,FSET),              X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(14,34),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(15,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='GENDER( MALE / FEMALE ) :'
+PGEN     DFHMDF POS=(15,27),LENGTH=10,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(15,38),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(16,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='CONTACT NUMBER          :'
+PCNUM    DFHMDF POS=(16,27),LENGTH=10,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(16,38),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(17,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='BIRTH DATE (MM/DD/YYYY) :'
+PBDATE   DFHMDF POS=(17,27),LENGTH=10,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(17,38),LENGTH=01,ATTRB=ASKIP
+PMSG     DFHMDF POS=(20,04),LENGTH=70,ATTRB=PROT,COLOR=YELLOW,         X
+               INITIAL='                          '
+         DFHMDF POS=(24,04),LENGTH=75,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='PF1-CREATE PF2-UPDATE PF4- VIEW ENTER- CONFIRM X
+               PF3 - BACK'
+DOCREPO  DFHMDI SIZE=(24,80)
+         DFHMDF POS=(01,30),LENGTH=20,ATTRB=(PROT,BRT),                X
+               INITIAL='A A HOSPITALS'
+         DFHMDF POS=(01,63),LENGTH=6,ATTRB=PROT,INITIAL='DATE :'
+DOCDATE  DFHMDF POS=(01,70),LENGTH=10,ATTRB=PROT,INITIAL='DD/MM/YYYY'
+         DFHMDF POS=(04,25),LENGTH=30,ATTRB=(PROT,BRT),                X
+               INITIAL='DOCTOR REPOSITORY'
+         DFHMDF POS=(09,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='DOCTOR ID               :'
+DOCID    DFHMDF POS=(09,27),LENGTH=15,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(09,43),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(10,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='NAME OF DOCTOR          :'
+DOCNAME  DFHMDF POS=(10,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(10,58),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(11,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='ADDRESS OF THE DOCTOR   :'
+DOCADD   DFHMDF POS=(11,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(11,58),LENGTH=01,ATTRB=ASKIP
+DOCADD1  DFHMDF POS=(12,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(12,58),LENGTH=01,ATTRB=ASKIP
+DOCADD2  DFHMDF POS=(13,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(13,58),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(14,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='ZIP CODE                :'
+DOCZIP   DFHMDF POS=(14,27),LENGTH=06,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(14,34),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(15,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='GENDER( MALE / FEMALE ) :'
+DOCGEN   DFHMDF POS=(15,27),LENGTH=10,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(15,38),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(16,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='CONTACT NUMBER          :'
+DOCCNUM  DFHMDF POS=(16,27),LENGTH=10,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(16,38),LENGTH=1,ATTRB=PROT
+DOCMSG   DFHMDF POS=(20,04),LENGTH=70,ATTRB=PROT,COLOR=YELLOW,         X
+               INITIAL='                          '
+         DFHMDF POS=(24,04),LENGTH=75,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='PF1-CREATE PF2-UPDATE PF4- VIEW ENTER- CONFIRM X
+               PF3 - EXIT'
+DONREPO  DFHMDI SIZE=(24,80)
+         DFHMDF POS=(01,30),LENGTH=20,ATTRB=(PROT,BRT),                X
+               INITIAL='A A HOSPITALS'
+         DFHMDF POS=(01,63),LENGTH=6,ATTRB=PROT,INITIAL='DATE :'
+DONDATE  DFHMDF POS=(01,70),LENGTH=10,ATTRB=PROT,INITIAL='DD/MM/YYYY'
+         DFHMDF POS=(04,25),LENGTH=30,ATTRB=(PROT,BRT),                X
+               INITIAL='BLOOD DONOR REPOSITORY'
+         DFHMDF POS=(08,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='DONOR ID                :'
+DONID    DFHMDF POS=(08,27),LENGTH=15,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(08,43),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(09,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='NAME OF DONOR           :'
+DONNAME  DFHMDF POS=(09,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(09,58),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(10,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='BLOOD GROUP             :'
+BLDGRP   DFHMDF POS=(10,27),LENGTH=10,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(10,38),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(11,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='ADDRESS OF THE DONOR    :'
+DONADD   DFHMDF POS=(11,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(11,58),LENGTH=01,ATTRB=ASKIP
+DONADD1  DFHMDF POS=(12,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(12,58),LENGTH=01,ATTRB=ASKIP
+DONADD2  DFHMDF POS=(13,27),LENGTH=30,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(13,58),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(14,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='ZIP CODE                :'
+DONZIP   DFHMDF POS=(14,27),LENGTH=06,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(14,34),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(15,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='GENDER( MALE / FEMALE ) :'
+DONGEN   DFHMDF POS=(15,27),LENGTH=10,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(15,38),LENGTH=01,ATTRB=ASKIP
+         DFHMDF POS=(16,01),LENGTH=25,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='CONTACT NUMBER          :'
+DONCNUM  DFHMDF POS=(16,27),LENGTH=10,ATTRB=(UNPROT,FSET),             X
+               HILIGHT=UNDERLINE
+         DFHMDF POS=(16,38),LENGTH=01,ATTRB=ASKIP
+DONMSG   DFHMDF POS=(20,04),LENGTH=70,ATTRB=PROT,COLOR=YELLOW,         X
+               INITIAL='                          '
+         DFHMDF POS=(24,04),LENGTH=75,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL='PF1-CREATE PF2-UPDATE PF4- VIEW ENTER- CONFIRM X
+               PF3-EXIT PF12 - CLEAR'
+PATREPT  DFHMDI SIZE=(24,80)
+         DFHMDF POS=(03,30),LENGTH=20,ATTRB=(PROT,BRT),COLOR=BLUE,     X
+               INITIAL='PATIENT REPORT'
+         DFHMDF POS=(06,01),LENGTH=79,ATTRB=(PROT,BRT),                X
+               INITIAL='-----------------------------------------------X
+               -------------------------------'
+         DFHMDF POS=(08,01),LENGTH=10,ATTRB=(PROT,BRT),                X
+               INITIAL='PATIENT ID'
+         DFHMDF POS=(08,18),LENGTH=4,ATTRB=(PROT,BRT),                 X
+               INITIAL='NAME'
+         DFHMDF POS=(08,49),LENGTH=6,ATTRB=(PROT,BRT),                 X
+               INITIAL='GENDER'
+         DFHMDF POS=(08,60),LENGTH=13,ATTRB=(PROT,BRT),                X
+               INITIAL='MOBILE NUMBER'
+         DFHMDF POS=(10,01),LENGTH=79,ATTRB=(PROT,BRT),                X
+               INITIAL='-----------------------------------------------X
+               -------------------------------'
+PATLINE  DFHMDF POS=(12,01),LENGTH=79,ATTRB=(PROT,ASKIP,NORM),         X
+               OCCURS=5
+PATREPM  DFHMDF POS=(20,04),LENGTH=70,ATTRB=PROT,COLOR=YELLOW,         X
+               INITIAL='                          '
+         DFHMDF POS=(24,04),LENGTH=75,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL=' PF3-EXIT PF7-PREVIOUS PF8-NEXT '
+DOCREPT  DFHMDI SIZE=(24,80)
+         DFHMDF POS=(03,30),LENGTH=20,ATTRB=(PROT,BRT),COLOR=BLUE,     X
+               INITIAL='DOCTOR REPORT'
+         DFHMDF POS=(06,01),LENGTH=79,ATTRB=(PROT,BRT),                X
+               INITIAL='-----------------------------------------------X
+               -------------------------------'
+         DFHMDF POS=(08,01),LENGTH=10,ATTRB=(PROT,BRT),                X
+               INITIAL='DOCTOR ID'
+         DFHMDF POS=(08,18),LENGTH=4,ATTRB=(PROT,BRT),                 X
+               INITIAL='NAME'
+         DFHMDF POS=(08,49),LENGTH=6,ATTRB=(PROT,BRT),                 X
+               INITIAL='GENDER'
+         DFHMDF POS=(08,60),LENGTH=13,ATTRB=(PROT,BRT),                X
+               INITIAL='MOBILE NUMBER'
+         DFHMDF POS=(10,01),LENGTH=79,ATTRB=(PROT,BRT),                X
+               INITIAL='-----------------------------------------------X
+               -------------------------------'
+DOCLINE  DFHMDF POS=(12,01),LENGTH=79,ATTRB=(PROT,ASKIP,NORM),         X
+               OCCURS=5
+DOCREPM  DFHMDF POS=(20,04),LENGTH=70,ATTRB=PROT,COLOR=YELLOW,         X
+               INITIAL='                          '
+         DFHMDF POS=(24,04),LENGTH=75,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL=' PF3-EXIT PF7-PREVIOUS PF8-NEXT '
+DONREPT  DFHMDI SIZE=(24,80)
+         DFHMDF POS=(03,30),LENGTH=20,ATTRB=(PROT,BRT),COLOR=BLUE,     X
+               INITIAL='DONOR REPORT'
+         DFHMDF POS=(06,01),LENGTH=79,ATTRB=(PROT,BRT),                X
+               INITIAL='-----------------------------------------------X
+               -------------------------------'
+         DFHMDF POS=(08,01),LENGTH=10,ATTRB=(PROT,BRT),                X
+               INITIAL='DONOR ID'
+         DFHMDF POS=(08,18),LENGTH=4,ATTRB=(PROT,BRT),                 X
+               INITIAL='NAME'
+         DFHMDF POS=(08,49),LENGTH=6,ATTRB=(PROT,BRT),                 X
+               INITIAL='GENDER'
+         DFHMDF POS=(08,60),LENGTH=13,ATTRB=(PROT,BRT),                X
+               INITIAL='MOBILE NUMBER'
+         DFHMDF POS=(10,01),LENGTH=79,ATTRB=(PROT,BRT),                X
+               INITIAL='-----------------------------------------------X
+               -------------------------------'
+DONLINE  DFHMDF POS=(12,01),LENGTH=79,ATTRB=(PROT,ASKIP,NORM),         X
+               OCCURS=5
+DONREPM  DFHMDF POS=(20,04),LENGTH=70,ATTRB=PROT,COLOR=YELLOW,         X
+               INITIAL='                          '
+         DFHMDF POS=(24,04),LENGTH=75,ATTRB=PROT,COLOR=BLUE,           X
+               INITIAL=' PF3-EXIT PF7-PREVIOUS PF8-NEXT '
+         DFHMSD TYPE=FINAL
+         END
+

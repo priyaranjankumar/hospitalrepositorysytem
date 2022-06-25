@@ -1,0 +1,66 @@
+--create table users                                                    00010001
+--     (userid char(6) not null primary key,                            00010002 
+--      passwd CHAR(6) not null )                                       00010003
+--      IN DBMATE2.TCAPGB18;                                            00010004 
+--CREATE UNIQUE INDEX usrid1 ON users(userid);                          00010005
+--insert into users values('100001','DEEPKP');                          00010005
+--insert into users values('100002','SUBHAM');                          00010007
+--insert into users values('100003','SOUMYA');                          00010008
+--create table patient_detail                                           00010009
+--     (PATIENT_ID bigint   not null primary key generated              00020005
+--      always as identity ( start with 100000000000001 increment       00021005
+--      by 1 ),                                                         00022005
+--      PATIENT_NAME CHAR(30) NOT NULL,                                 00030005
+--      PATIENT_ADD_ST_NUMBER CHAR(30) NOT NULL,                        00040005
+--      PATIENT_ADD_ST_NAME1  CHAR(30) NOT NULL,                        00050005
+--      PATIENT_ADD_ST_NAME2  CHAR(30),                                 00060005
+--      PATIENT_ADD_CITY      CHAR(30) NOT NULL,                        00070005
+--      PATIENT_ADD_STATE     CHAR(30) NOT NULl,                        00080005
+--      PATIENT_ADD_COUNTRY   CHAR(30) NOT NULL,                        00090005
+--      PATIENT_ADD_ZIPCD     CHAR(10) NOT NULL,                        00100005
+--      PATIENT_DOB           date,                                     00110005
+--      Patient_GENDER        CHAR(10) NOT NULL,                        00120005
+--      Patient_contact_num   char(10) not null                         00130005
+---    )                                                                00140005
+--     IN DBMATE2.TCAPGB18;                                             00150005
+--     CREATE UNIQUE INDEX patidx ON  patient_detail(PATIENT_ID);       00160005
+--     delete from pATIENT_DETAIL where PATIENT_ID > 100000000000001 ;  00180009
+  select * from PATIENT_DETAIL;                                         00190019
+--create table doctor_detail                                            00200018
+--     (doctor_ID bigint   not null primary key generated               00210018
+--      always as identity ( start with 100000000000001 increment       00220018
+--      by 1 ),                                                         00230018
+--      doctor_NAME CHAR(30) NOT NULL,                                  00240018
+--      doctor_ADD_ST_NUMBER CHAR(30) NOT NULL,                         00250018
+--      doctor_ADD_ST_NAME1  CHAR(30) NOT NULL,                         00260018
+--      doctor_ADD_ST_NAME2  CHAR(30),                                  00270018
+--      doctor_ADD_CITY      CHAR(30) NOT NULL,                         00280018
+--      doctor_ADD_STATE     CHAR(30) NOT NULl,                         00290018
+--      doctor_ADD_COUNTRY   CHAR(30) NOT NULL,                         00300018
+--      doctor_ADD_ZIPCD     CHAR(10) NOT NULL,                         00310018
+--      doctor_GENDER        CHAR(10) NOT NULL,                         00330018
+--      doctor_contact_num   char(10) not null                          00340018
+--     )                                                                00350018
+--     IN DBMATE2.TCAPGB18;                                             00360018
+--     CREATE UNIQUE INDEX docidx ON  doctor_detail(doctor_ID);         00370018
+--select * from doctor_DETAIL;                                          00390020
+--create table donor_detail                                             00400021
+--     (donor_ID bigint   not null primary key generated                00410021
+--      always as identity ( start with 300000000000001 increment       00420021
+--      by 1 ),                                                         00430021
+--      donor_NAME CHAR(30) NOT NULL,                                   00440021
+--      donor_blood_group cHAR(30) NOT NULL,                            00441021
+--      donor_ADD_ST_NUMBER CHAR(30) NOT NULL,                          00450021
+--      donor_ADD_ST_NAME1  CHAR(30) NOT NULL,                          00460021
+--      donor_ADD_ST_NAME2  CHAR(30),                                   00470021
+--      donor_ADD_CITY      CHAR(30) NOT NULL,                          00480021
+--      donor_ADD_STATE     CHAR(30) NOT NULl,                          00490021
+--      donor_ADD_COUNTRY   CHAR(30) NOT NULL,                          00500021
+--      donor_ADD_ZIPCD     CHAR(10) NOT NULL,                          00510021
+--      donor_GENDER        CHAR(10) NOT NULL,                          00520021
+--      donor_contact_num   char(10) not null                           00530021
+--     )                                                                00540021
+--     IN DBMATE2.TCAPGB18;                                             00550021
+--     CREATE UNIQUE INDEX donidx ON  donor_detail(donor_ID);           00560021
+--select * from donor_DETAIL;                                           00570022
+
