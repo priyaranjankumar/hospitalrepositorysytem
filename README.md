@@ -16,8 +16,6 @@ The **Hospital Repository System** is a comprehensive software solution built us
 
 - **User-Friendly Interface**: The system offers an intuitive user interface for easy data entry and retrieval, making it accessible to both technical and non-technical staff.
 
-- **Security**: Implement access controls and authentication mechanisms to ensure data confidentiality and integrity.
-
 ## Technologies Used
 
 - **COBOL**: The primary programming language used for developing the core logic and functionalities of the system.
