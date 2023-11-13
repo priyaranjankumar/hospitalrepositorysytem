@@ -55,11 +55,14 @@ To run the Hospital Repository System, you will need the following:
 ## Usage
 
 1. Launch the Hospital Repository System.
+   ![Image](./Screens/1_Login_Screen.png)
 
 2. Use the user-friendly interface to add, update, or retrieve patient, doctor, and donor information.
-
+   ![Image](./Screens/2_Menu.png)
 3. Generate reports as needed by specifying the report type and parameters.
-
+   ![Image](./Screens/6_Patient_Report.png)
+   ![Image](./Screens/7_Doctor_Report.png)
+   ![Image](./Screens/8_Donor_Report.png)
 4. Ensure proper backup and data recovery procedures are in place to safeguard critical data.
 
 ## Contribution
